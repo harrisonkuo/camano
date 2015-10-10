@@ -33,3 +33,30 @@ body {
         padding-top: 150px;
     }
 }
+
+/* Setting Menu */
+
+#settings-wrap {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px%;
+  overflow-y: auto;
+  background: gray;
+  transition: all 0.2s ease 0s;
+}
+
+.settings-nav {
+  position: absolute;;
+  top: 0;
+  width 250px;
+  margin: 0;
+  padding: 0;
+}
+
+.settings-nav li {
+  text-indent: 20px;
+  line-height: 50px;
+}
