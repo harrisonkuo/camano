@@ -12,18 +12,6 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Init annyang
-    <script>
-      if (annyang) {
-        var commands = {
-          'hello': function() {alert('Hello');}
-        };
-        annyang.addCommands(commands);
-        annyang.start();
-      }
-    </script>
-    -->
-
 </head>
 <body>
 
@@ -49,12 +37,20 @@
     <script src="js/jquery/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/scrollReveal/scrollReveal.min.js"></script>
-    <!-- <script src="js/annyang/annyang.min.js"></script> -->
+    <script src="js/annyang/annyang.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
 
     <!-- Initialize Scripts -->
 
     <script>
       window.sr = new scrollReveal();
+      if (annyang) {
+        var commands = {
+          'hello': function() {alert('Hello');}
+        };
+        annyang.addCommands(commands);
+        annyang.start();
+      }
     </script>
 
     <!-- End of Scripts -->
