@@ -12,6 +12,17 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Init annyang
+    <script>
+      if (annyang) {
+        var commands = {
+          'hello': function() {alert('Hello');}
+        };
+        annyang.addCommands(commands);
+        annyang.start();
+      }
+    </script>
+    -->
 
 </head>
 <body>
@@ -26,7 +37,7 @@
     </div>
 
     <div class="input-group input-width" data-sr="enter bottom hustle 50px over 1.5s">
-        <input type="text" class="form-control" placeholder="You are a...">
+        <input type="text" class="form-control typeahead" placeholder="You are a...">
         <span class="input-group-btn">
             <button class="btn btn-default" type="button">Start!</button>
         </span>
@@ -35,15 +46,15 @@
 </div>
 
     <!-- Scripts -->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scrollReveal.min.js"></script>
-    <script src="js/annyang.min.js"></script>
+    <script src="js/jquery/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/scrollReveal/scrollReveal.min.js"></script>
+    <!-- <script src="js/annyang/annyang.min.js"></script> -->
 
     <!-- Initialize Scripts -->
 
     <script>
-    window.sr = new scrollReveal();
+      window.sr = new scrollReveal();
     </script>
 
     <!-- End of Scripts -->
