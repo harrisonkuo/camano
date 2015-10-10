@@ -1,0 +1,2 @@
+ErrorDocument 404 /404/index.html
+AddType image/x-icon .ico
