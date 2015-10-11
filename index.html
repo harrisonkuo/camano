@@ -24,21 +24,21 @@
             <a href="#top"  onclick = $("#menu-toggle").click(); >Settings</a>
         </li>
         <li class="switch-group">
-          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Fetches advanced engineering data">
-            <h2 class="button-title">Technical</h2>
+          <div class="col-xs-6 col-sm-3">
+            <h2 class="button-title" data-toggle="tooltip" title="Fetches advanced engineering data">Technical</h2>
+            <input type="checkbox" name="technical" checked>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <h2 class="button-title" data-toggle="tooltip" title="Provides localization">Location</h2>
             <input type="checkbox" name="location" checked>
           </div>
-          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Provides localization">
-            <h2 class="button-title">Location</h2>
-            <input type="checkbox" name="location" checked>
+          <div class="col-xs-6 col-sm-3">
+            <h2 class="button-title" data-toggle="tooltip" title="Higher dimensionality magic">Extrapolate</h2>
+            <input type="checkbox" name="extrapolate" checked>
           </div>
-          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Higher dimensionality magic">
-            <h2 class="button-title">Extrapolate</h2>
-            <input type="checkbox" name="location" checked>
-          </div>
-          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Stores local data">
-            <h2 class="button-title">Store</h2>
-            <input type="checkbox" name="location" checked>
+          <div class="col-xs-6 col-sm-3">
+            <h2 class="button-title" data-toggle="tooltip" title="Caches results">Cache</h2>
+            <input type="checkbox" name="cache" checked>
           </div>
         </li>
     </ul>
@@ -67,36 +67,8 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/bootstrap/bootstrap-switch.min.js"></script>
     <script src="js/scrollReveal/scrollReveal.min.js"></script>
-    <!-- <script src="js/annyang/annyang.min.js"></script> -->
-    <script src="js/angular/angular.min.js"></script>
-
-    <!-- Initialize Scripts -->
-
-    <script>
-      window.sr = new scrollReveal();
-      /*
-      if (annyang) {
-        var commands = {
-          'hello': function() {alert('Hello');}
-        };
-        annyang.addCommands(commands);
-        annyang.start();
-      }
-      */
-      $("#menu-close").click(function(e) {
-          e.preventDefault();
-          $("#sidebar-wrapper").toggleClass("active");
-      });
-
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#sidebar-wrapper").toggleClass("active");
-      });
-      $("[name='location']").bootstrapSwitch();
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
+    <script src="js/annyang/annyang.min.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- End of Scripts -->
 
