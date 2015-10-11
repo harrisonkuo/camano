@@ -8,12 +8,41 @@
 
     <!-- Bootstrap Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-switch.min.css">
 
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
+
+<!-- Settings -->
+<a id="menu-toggle" href="#" class="btn btn-lg glyphicon glyphicon-wrench" aria-hidden="true"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#top"  onclick = $("#menu-toggle").click(); >Settings</a>
+        </li>
+        <li class="switch-group">
+          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Fetches advanced engineering data">
+            <h2 class="button-title">Technical</h2>
+            <input type="checkbox" name="location" checked>
+          </div>
+          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Provides localization">
+            <h2 class="button-title">Location</h2>
+            <input type="checkbox" name="location" checked>
+          </div>
+          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Higher dimensionality magic">
+            <h2 class="button-title">Extrapolate</h2>
+            <input type="checkbox" name="location" checked>
+          </div>
+          <div class="col-xs-6 col-sm-3" data-toggle="tooltip" title="Stores local data">
+            <h2 class="button-title">Store</h2>
+            <input type="checkbox" name="location" checked>
+          </div>
+        </li>
+    </ul>
+</nav>
 
 <div class="container intro-block">
 
@@ -25,7 +54,7 @@
     </div>
 
     <div class="input-group input-width" data-sr="enter bottom hustle 50px over 1.5s">
-        <input type="text" class="form-control typeahead" placeholder="You are a...">
+        <input type="text" class="form-control typeahead" placeholder="What are you looking for...">
         <span class="input-group-btn">
             <button class="btn btn-default" type="button">Start!</button>
         </span>
@@ -36,6 +65,7 @@
     <!-- Scripts -->
     <script src="js/jquery/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/bootstrap/bootstrap-switch.min.js"></script>
     <script src="js/scrollReveal/scrollReveal.min.js"></script>
     <!-- <script src="js/annyang/annyang.min.js"></script> -->
     <script src="js/angular/angular.min.js"></script>
@@ -53,6 +83,19 @@
         annyang.start();
       }
       */
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      $("[name='location']").bootstrapSwitch();
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
     </script>
 
     <!-- End of Scripts -->
